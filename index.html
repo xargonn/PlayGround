@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#18372f">
+  <title>Moonroot Farm — Day & Night</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Moonroot Farm home">
+        <span class="brand-mark">✿</span><span><b>MOONROOT</b><small>FARM & FABLE</small></span>
+      </a>
+      <div class="season-pill"><span class="sun-icon">☀</span> SPRING <i></i> YEAR 1</div>
+      <div class="resources">
+        <div class="resource"><span class="coin">✦</span><b id="gold">24</b><small>GOLD</small></div>
+        <div class="resource"><span class="heart">♥</span><b id="health">10</b><small>BARN</small></div>
+      </div>
+    </header>
+
+    <section class="game-heading">
+      <div><p class="eyebrow" id="day-label">DAY 01 · MORNING</p><h1 id="phase-title">A little patch of <em>paradise.</em></h1></div>
+      <div class="phase-track"><span class="phase-dot active" id="day-dot">☀ <b>DAY</b></span><span class="track-line"></span><span class="phase-dot" id="night-dot">☾ <b>NIGHT</b></span></div>
+    </section>
+
+    <section class="game-card" aria-label="Moonroot Farm game">
+      <div class="canvas-wrap">
+        <canvas id="game" width="1000" height="600" aria-label="Farm game board. Tap a plot or tower pad to play."></canvas>
+        <div class="canvas-tip" id="canvas-tip"><span>↖</span> YOUR LITTLE FARM</div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </div>
+      <div class="board-footer">
+        <span class="legend"><i class="legend-sprout">✿</i> Grow crops by watering them each day</span>
+        <span class="goal"><i>✧</i> Keep the barn standing through the night</span>
+      </div>
+    </section>
+
+    <section class="control-panel">
+      <div class="controls-main" id="controls-main"></div>
+      <aside class="day-card" id="side-card"></aside>
+    </section>
+    <footer class="footer-note"><span>MADE WITH MUD, MOONLIGHT & A LITTLE COURAGE</span><span>✦ &nbsp; TIP: HARVESTS HELP YOU DEFEND</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
